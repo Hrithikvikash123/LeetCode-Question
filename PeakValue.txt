@@ -1,0 +1,25 @@
+package com.company;
+
+public class FindPeakValue {
+    public static void main(String[] args) {
+
+        int arr[]={ 10, 20, 15, 2, 23, 90, 67};
+
+        int n=arr.length;
+
+        int l=0;
+        int h=arr.length-1;
+        int mid=(l+h)/2;
+        while(l<=h) {
+            if ((mid == 0 || arr[mid] > arr[mid-1]) && (n == 0 || arr[mid] > arr[mid + 1])) {
+                System.out.print(arr[mid] + " ");
+                break;
+            } else if (arr[mid] > arr[mid - 1]) {
+                l++;
+            } else {
+                h--;
+            }
+            mid = (l + h) / 2;
+        }
+    }
+}
