@@ -1,0 +1,31 @@
+package com.company;
+import java.util.*;
+public class FindNonRepeatingNo {
+
+    public static void main(String[] args) {
+
+        /*
+
+        Non-Repeating Number
+
+        input 9,4,9,6,4
+
+        output 6 
+
+         */
+
+        int arr[]={9, 4, 9, 6 ,4};
+
+        int result=arr[0];
+
+        for(int i=1;i<arr.length;i++){
+
+            result=result^arr[i];
+        }
+
+        System.out.println(result);
+
+
+    }
+}
+
