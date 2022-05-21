@@ -1,0 +1,40 @@
+package com.company;
+
+public class FindMaxOfSubarray {
+
+    public static void main(String[] args) {
+
+        int arr[]={4,-2,-3,4,-1,-2,1,5,-3};
+        
+        /*
+        
+        Find MaximumSum of SubArray
+        
+        input -> 4,-2,-3,4,-1,-2,1,5,-3
+        
+        output -> 7 
+      
+         */
+        
+        
+        int maxvalue=Integer.MIN_VALUE;
+        int maxIndex=0;
+
+        for(int i=0;i<arr.length;i++){
+
+            maxIndex=maxIndex+arr[i];
+
+            if(maxvalue<maxIndex){
+
+                maxvalue=maxIndex;
+
+            }
+            if(maxIndex<0){
+
+                maxIndex=0;
+            }
+        }
+        System.out.println(maxvalue);
+    }
+
+}
