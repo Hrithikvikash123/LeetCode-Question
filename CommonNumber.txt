@@ -1,0 +1,27 @@
+package com.company;
+
+public class CommonNumber {
+    public static void main(String[] args) {
+
+        int arr[]={ 1,5,10,20,40,80};
+        int arr1[]={ 6,7,20,80,100};
+        int arr2[]={ 3,4,15,20,30,70,80,120};
+
+        int x=0,y=0,z=0;
+
+        while(x<arr.length && y<arr1.length && z<arr2.length){
+            if(arr[x]==arr1[y] && arr1[y]==arr2[z]){
+                System.out.print(arr[x]+" ");
+                x++;
+                y++;
+                z++;
+            }else if(arr[x]>arr1[y]){
+                y++;
+            }else if(arr1[y]>arr2[z]){
+                z++;
+            }else{
+                x++;
+            }
+        }
+    }
+}
