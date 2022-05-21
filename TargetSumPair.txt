@@ -1,0 +1,35 @@
+package com.company;
+
+public class SumTarget {
+    public static void main(String[] args) {
+
+        int nums[] = {2,3,4};
+        int target = 6;
+
+     /* 
+     
+          output   2 , 4
+
+
+    */
+        int l = 0;
+        int h = nums.length - 1;
+        int mid = (l + h) / 2;
+        while (l <= h) {
+            if (nums[l] + nums[h] < target) {
+                l++;
+
+            } else if (nums[l] + nums[h] > target) {
+                h--;
+
+            } else if (nums[l] + nums[h] == target) {
+
+                System.out.println(l + " " + h);
+                l++;
+                h--;
+
+            }
+
+        }
+    }
+}
